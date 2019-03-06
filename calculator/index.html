@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Budget Planner</title>
+    <link href="https://unpkg.com/@ionic/core@latest/css/ionic.bundle.css" rel="stylesheet">
+</head>
+
+<body>
+    <ion-app>
+        <ion-header>
+            <ion-toolbar color="primary">
+                <ion-title>Calcul de masa corporala</ion-title>
+            </ion-toolbar>
+        </ion-header>
+        <ion-content>
+            <ion-grid>
+                <ion-row>
+                    <ion-col size-md="6" offset-md="3">
+                        <ion-card>
+                            <ion-card-content>
+                                <ion-item>
+                                    <ion-label position="floating">Numele</ion-label>
+                                    <ion-input type="text" id="name"></ion-input>
+                                </ion-item>
+                                <ion-item>
+                                    <ion-label position="floating">Prenumele</ion-label>
+                                    <ion-input type="text" id="surname"></ion-input>
+                                </ion-item>
+                                <ion-item margin-vertical>
+                                    <ion-label>Gen</ion-label>
+                                    <ion-select placeholder="Alegeti genul" ok-text="Okay" cancel-text="Dismiss"
+                                        interface="alert" id="sex">
+                                        <ion-select-option value="female">Femeie</ion-select-option>
+                                        <ion-select-option value="male">Barbat</ion-select-option>
+                                    </ion-select>
+                                </ion-item>
+                                <ion-item>
+                                    <ion-label position="floating">Inaltimea (cm)</ion-label>
+                                    <ion-input type="number" id="height"></ion-input>
+                                </ion-item>
+                                <ion-item>
+                                    <ion-label position="floating">Varsta</ion-label>
+                                    <ion-input type="number" id="age"></ion-input>
+                                </ion-item>
+                                <ion-item>
+                                    <ion-label position="floating">Masa Corporala (kg)</ion-label>
+                                    <ion-input type="number" id="weight"></ion-input>
+                                </ion-item>
+                                <div margin-vertical text-center>
+                                    <ion-button color="primary" id="show-result">
+                                            <ion-ripple-effect></ion-ripple-effect>
+                                        <ion-icon name="information-circle" slot="end"></ion-icon>
+                                        Detalii
+                                    </ion-button>
+                                </div>
+                            </ion-card-content>
+                        </ion-card>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+            <ion-alert-controller>
+            </ion-alert-controller>
+        </ion-content>
+    </ion-app>
+    <script src="https://unpkg.com/@ionic/core@latest/dist/ionic.js"></script>
+    <script src="app3.js"></script>
+</body>
+
+</html>
